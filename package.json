@@ -1,7 +1,7 @@
 {
   "name": "auburn-hacks-placeholder-2024",
   "version": "0.1.0",
-  "homepage": "https://cadypridgeon.github.io/auburn-hacks-placeholder-2024/",
+  "homepage": "https://auburnhacks.com",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
