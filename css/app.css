@@ -26,6 +26,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  z-index: 10;
 }
 
 #placeholder-socials {
