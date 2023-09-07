@@ -1,95 +1,68 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import Image from "next/image";
+import styles from "../css/app.css";
+import {
+  faLinkedinIn,
+  faInstagram,
+  faFacebookF,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import Header from "../components/header.js";
+import Socials from "../components/socials.js";
+import Stars from "../components/stars";
+
+config.autoAddCss = false;
 
 export default function Home() {
+  const sections = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "FAQ", id: "faq" },
+    { name: "Sponsors", id: "sponsors" },
+  ];
+
+  const socials = [
+    {
+      icon: faLinkedinIn,
+      link: "https://www.linkedin.com/company/auburnhacks/",
+    },
+    {
+      icon: faInstagram,
+      link: "https://www.instagram.com/auburnhacks/?hl=en",
+    },
+    {
+      icon: faFacebookF,
+      link: "https://www.facebook.com/AuburnHacks/",
+    },
+    {
+      icon: faEnvelope,
+      link: "mailto:staff@auburnhacks.com",
+    },
+  ];
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="background">
+      <Stars />
+      {/* <Header sections={sections} /> */}
+      <div className="content">
+        <div className="home" id="home">
+          <h1 className="h1 primary">Auburn Hacks</h1>
+          <h2 className="h2 primary">February 3-4, 2024</h2>
+          <div className="large-button">
+            <a
+              href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
+              target="_blank"
+            >
+              PRE-REGISTER
+            </a>
+          </div>
+          <div id="placeholder-socials">
+            <Socials socials={socials} />
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

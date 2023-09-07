@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Unbounded&display=swap");
+
+:root {
+  --primary: #ffffff;
+  --secondary: #d6e4ff;
+  --tertiary: #b3c9ff;
+  --accent: #f9bf86;
+  --background: #2d3f6c;
+
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.tertiary {
+  color: var(--tertiary);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.background {
+  color: var(--background);
+}
+
+.h1 {
+  font-family: "Unbounded", cursive;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: "Unbounded", cursive;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: "Unbounded", cursive;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.body-l {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.body-m {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.body-s {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.large-button {
+  display: inline-flex;
+  padding: 0.5rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: "Unbounded";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.large-button:hover {
+  background-color: var(--accent);
+}
+
+.primary-button {
+  display: inline-flex;
+  padding: 0.5rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: var(--accent);
+}
+
+.secondary-button {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+  background-color: var(--accent);
+}
+
+.tertiary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.tertiary-button:hover {
+  color: var(--accent);
+}

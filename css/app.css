@@ -1,0 +1,34 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  background: rgb(14, 19, 32);
+  background: linear-gradient(
+    330deg,
+    rgba(14, 19, 32, 1) 0%,
+    rgba(41, 67, 129, 1) 100%
+  );
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 11.25rem; */
+  /* padding-top: 11.25rem; */
+  /* padding-bottom: 11.25rem; */
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#placeholder-socials {
+  position: absolute;
+  bottom: 2rem;
+}
