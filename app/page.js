@@ -12,12 +12,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Header from "../components/header.js";
 import Socials from "../components/socials.js";
 import Stars from "../components/stars";
-import TagManager from "react-gtm-module";
-
-const tagManagerArgs = {
-  gtmId: "G-8DC51CYN23",
-};
-TagManager.initialize(tagManagerArgs);
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 config.autoAddCss = false;
 
@@ -49,26 +44,29 @@ export default function Home() {
   ];
 
   return (
-    <div className="background">
-      <Stars />
-      {/* <Header sections={sections} /> */}
-      <div className="content">
-        <div className="home" id="home">
-          <h1 className="h1 primary">Auburn Hacks</h1>
-          <h2 className="h2 primary">February 3-4, 2024</h2>
-          <div className="large-button">
-            <a
-              href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
-              target="_blank"
-            >
-              PRE-REGISTER
-            </a>
-          </div>
-          <div id="placeholder-socials">
-            <Socials socials={socials} />
+    <>
+      <GoogleAnalytics gaMeasurementId="G-8DC51CYN23" />
+      <div className="background">
+        <Stars />
+        {/* <Header sections={sections} /> */}
+        <div className="content">
+          <div className="home" id="home">
+            <h1 className="h1 primary">Auburn Hacks</h1>
+            <h2 className="h2 primary">February 3-4, 2024</h2>
+            <div className="large-button">
+              <a
+                href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
+                target="_blank"
+              >
+                PRE-REGISTER
+              </a>
+            </div>
+            <div id="placeholder-socials">
+              <Socials socials={socials} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
