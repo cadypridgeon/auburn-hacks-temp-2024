@@ -12,6 +12,12 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Header from "../components/header.js";
 import Socials from "../components/socials.js";
 import Stars from "../components/stars";
+import TagManager from "react-gtm-module";
+
+const tagManagerArgs = {
+  gtmId: "G-8DC51CYN23",
+};
+TagManager.initialize(tagManagerArgs);
 
 config.autoAddCss = false;
 
